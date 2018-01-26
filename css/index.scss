@@ -5,9 +5,24 @@
   box-sizing: border-box; // Bokse har altid den størrelse man giver uanset om der tilføjes margen mv.
 }
 
+$turkis: #64c29e;
+@mixin box{ }
+
+
 body {
   margin: 0; // Ingen kanter i siden af browser
-  background-color: yellow;
+  background-color: $turkis ;
+}
+
+.parent{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: [row1start] 800px [row2start] 470px [row3start] 600px [row4start] 600px [row5start] 600px [row6start] 470px [row7start] 534px [row8start] 200px [row9start] 470px [row10start] 250px;
+}
+
+.billede1 {
+  grid-column-start: 1;
+  grid-column-end: 7;
 }
 
 h1, h2, h3, h4, h5, h6 {
